@@ -16,5 +16,12 @@ Playable mode will have Quint,Willpower,Paradox,Health, and paradox flaws editab
 
 Once you have saved it will switch to play mode where the dots will no longer be editable and the planning dots will dissapear health, willpower, and Quint will be the only ones that can be changed and an Edit Character Sheet button, Load New Character Sheet will be in the upper right.
 */
-//prompt("Place your import code here!")
+
+function loadCharSheet() {
+	prompt("Place your import code here!")
+}
+
+window.onload =_=> {
+	document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
+}
 
