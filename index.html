@@ -1,9 +1,7 @@
-
-
+<!--
 Last action: Added Names to Attributes
 
-
-<!-- Key:
+Key:
  Classes: drop = drop down menue
 
 Values
@@ -72,336 +70,929 @@ pSave = Printable save
 
 <html>
 	<head>
-	<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="main.css">
 	</head>
-
 	<body>
-	
-	<button name="load" id="load"> Load Character Sheet </button>
-			<textarea name="load" rows="10" cols="30">
-			Paste Save Text to Load
-			</textarea>
-	<button name="dSave" id="save"> Save Digital Character Sheet </button>
-	<button name="pSave" id="save"> Save Printable Character Sheet </button>
-	<button name="create" id="create"> Create New Character </button>
-	
-	<button name="play" id="play"> Play Mode </button>
-	<button name="edit" id="edit"> Edit Mode </button>
-		<p>Planning Mode 
-			<input type="checkbox"></p>
-	
-		<div id="player_information">
-		<p>Player Name: <input name="player"></input></p>
-		<p>Email Address: <input name="pEmail"></input></p>
-		<p>Membership ID: <input name="mes#"></input></p>
-		<p>Venue Storyteller: <input name="vst" ></input></p>
-		<p>VST Email: <input name="vEmail"></input></p>
-		<p>Domian Coordinator: <input name="dc"></input></p>
-		<p>DC Email: <input name="dEmail" ></input></p>
+		<div id="start_screen">
+			<button id="load">Load Character Sheet</button>
+			<button id="create">Create New Character</button>
 		</div>
-		
-		<!---------------------------------CHARACTER INFO------------------------------------------------------>
-		
-		<div id="character_information">
-			<div id="character_information_1">
-			<p>Character Name: <input></input></p>
-			<p>Alias: <input></input></p>
-			<p>Paradigm: <input></input></p>
-			<div class="drop">
-				<p>Sect:<select name="sect" class="drop">
-				<option value="TN">Council of Nine Magickal Traditions</option>
-				<option value="TT">Technocratic Union</option>
-				<option value="DT">Disparates</option>
-				<option value="NI">Nephandi</option>
-				<option value="MR">Marauders</option>
-				</select>
-				
-				<p>Affiliation:<select name="aff" class="drop">
-				<option value="AY">Akashayana</option>
-				<option value="CC">Celestial Chorus</option>
-				<option value="CE">Cult of Ecstasy</option>
-				<option value="DS">Dreamspeakers</option>
-				<option value="EO">Euthanatos</option>
-				<option value="OH">Order of Hermes</option>
-				<option value="SE">Society of Ether</option>
-				<option value="VB">Verbena</option>
-				<option value="VA">Virtual Adept</option>
-				<option value="HO">Hollow Ones</option>
-				</select></p>
-				
-			<p>House: <input id="house" ></input></p>
-			<p>Creation Date: <input name="ccDate"></input></p>
+		<div id="main">
+			<button id="dSave">Save Digital Character Sheet</button>
+			<button id="pSave">Save Printable Character Sheet</button>
+			<button id="play">Play Mode</button>
+			<button id="edit">Edit Mode</button>
+			<div>
+				Planning Mode
+				<input type="checkbox" id="planning_mode">
 			</div>
-		
-			<div id="character_information_2"></p>
-			<p>Concept:		 	<input name="consept"></input></p>
-			<p>Archetype: 		<input name="arch"></input></p>
-			<p>Native Language: <input name="nLang"></input></p>
-				<div name="enl"><p>Enlightenment: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
+			<div id="player_information">
+				<div>
+					Player Name:<input name="player" />
 				</div>
-			<p>Date of Birth:	<input name="age" type="date"> </input></p>
-			<p>Awakening Date:	<input name="awake" type="date"> </input></p>
-			<p>Apparent Age: 	<input name="aAge" type="number"> </input></p>
+				<div>
+					Email Address:<input name="pEmail" />
+				</div>
+				<div>
+					Membership ID:<input name="mesId" />
+				</div>
+				<div>
+					Venue Storyteller:<input name="vst" />
+				</div>
+				<div>
+					VST Email:<input name="vEmail" />
+				</div>
+				<div>
+					Domian Coordinator:<input name="dc" />
+				</div>
+				<div>
+					DC Email:<input name="dEmail" />
+				</div>
 			</div>
-		</div>
-	
-		<div id="xp_tracker">
-		<p>Floor:<div name="FRXP"> </div></p>
-		<p>Earned:<div name="EXP"></div></p>
-		<p>Attributes:<div name="AXP"></div></p>
-		<p>Backgrounds:<div name="BXP"></div></p>
-		<p>Spheres:<div name="SPXP"></div></p>
-		<p>Flaws:<div name="FWXP"></div></p>
-		<p>Merits:<div name="MXP"></div></p>
-		<p>Skills:<div name="SKXP"></div></p>
-		<p>Total Spent:<div name="TSXP"></div></p>
-		<p>Remaining XP:<div name="RXP"></div></p>
-		</div>
-
-		<!-------------------------------------------------TRACKERS--------------------------------------------------------->
-		
-		<div id="trackers"> 
-			<div name="quint"><p>
-				Quintessence: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> </p>
+			<!---------------------------------CHARACTER INFO------------------------------------------------------>	
+			<div id="character_information">
+				<div id="character_information_1">
+				<div>Character Name:<input /></div>
+				<div>Alias:<input /></div>
+				<div>Paradigm:<input /></div>
+					<div class="drop">
+						<div>
+							Sect:
+							<select name="sect" class="drop">
+								<option value="TN">Council of Nine Magickal Traditions</option>
+								<option value="TT">Technocratic Union</option>
+								<option value="DT">Disparates</option>
+								<option value="NI">Nephandi</option>
+								<option value="MR">Marauders</option>
+							</select>
+						</div>
+						<div>
+							Affiliation:
+							<select name="aff" class="drop">
+								<option value="AY">Akashayana</option>
+								<option value="CC">Celestial Chorus</option>
+								<option value="CE">Cult of Ecstasy</option>
+								<option value="DS">Dreamspeakers</option>
+								<option value="EO">Euthanatos</option>
+								<option value="OH">Order of Hermes</option>
+								<option value="SE">Society of Ether</option>
+								<option value="VB">Verbena</option>
+								<option value="VA">Virtual Adept</option>
+								<option value="HO">Hollow Ones</option>
+							</select>
+						</div>
+						<div>
+							House:<input id="house" />
+						</div>
+						<div>
+							Creation Date:<input name="ccDate" />
+						</div>
+					</div>
+				</div>
+				<div id="character_information_2">
+					<div>
+						Concept:<input name="concept" />
+					</div>
+					<div>
+						Archetype:<input name="arch" />
+					</div>
+					<div>
+						Native Language:<input name="nLang" />
+					</div>
+					<div name="enl">
+						Enlightenment:
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>
+						Date of Birth:<input name="age" type="date" />
+					</div>
+					<div>
+						Awakening Date:<input name="awake" type="date" />
+					</div>
+					<div>
+						Apparent Age:<input name="aAge" type="number" />
+					</div>
+				</div>
 			</div>
-		<p>Tass: <input name="tass" type="number"> </input>
-			<div name="will"></p><p>
-				Willpower: 	<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <!--1 disapears without stam--> </p>
+			<div id="xp_tracker">
+				<div>
+					Floor:<span id="FRXP"></span>
+				</div>
+				<div>
+					Earned:<span name="EXP"></span>
+				</div>
+				<div>
+					Attributes:<span name="AXP"></span>
+				</div>
+				<div>
+					Backgrounds:<span name="BXP"></span>
+				</div>
+				<div>
+					Spheres:<span name="SPXP"></span>
+				</div>
+				<div>
+					Flaws:<span name="FWXP"></span>
+				</div>
+				<div>
+					Merits:<span name="MXP"></span>
+				</div>
+				<div>
+					Skills:<span name="SKXP"></span>
+				</div>
+				<div>
+					Total Spent:<span name="TSXP"></span>
+				</div>
+				<div>
+					Remaining XP:<span name="RXP"></span>
+				</div>
 			</div>
-			<p><div name="health">
-				Health Levels:  Healthy <button></button><button></button><button></button><button></button><!-- 4 State buttons off, /,X,* (1 disapears without stam) --> </p>
-						<p>Injured <button></button><button></button><button></button><button></button><!-- 4 4 State dots (1 disapears without stam)--> </p>
-						<p>Incapacitated <button></button><button></button><button></button><button></button><!-- 4 4 State dots--> </div></p>
-			<p><div name="pdx">
-				Pardox <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></div></p>
-		</div>
-		
-		<!-----------------------------------------------ATTRIBUTES--------------------------------------------------------------------->
-		
-		<div id="attributes"> <!-- top 5 dissapear either with less enl or with the pending of xP on other att-->
-		<p>Mental:
-			<div name="ment"> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></div>
-				Focus
-					<input name="int" type="checkbox"></input> Intellegence
-					<input name="wis" type="checkbox"></input> Wisdom
-					<input name="wit" type="checkbox"></input> Wits</p>
-		<p>Physical: 
-			<div name="phys"><input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> </div>
-				Focus
-					<input name="sta" type="checkbox"></input> Stamina
-					<input name="dex" type="checkbox"></input> Dexterity
-					<input name="str" type="checkbox"></input> Strength</p>
-		<p>Social: 
-			<div name="soci"><input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></div>
-				Focus
-					<input name="cha" type="checkbox"></input> Charisma 
-					<input name="man" type="checkbox"></input> Manipulation
-					<input name="app" type="checkbox"></input> Appearance</p>
-		</div>
-		
-		<!--------------------NAMES DONE TO HERE--------------------------SKILLS------------------------------------------>
-		
-		<div id="skill"> <!--most of the time at 5 unless Skilled is taken -->
-			<div id="skill_1">
-			<p>Animal Ken: <input type="checkbox"></input><input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input> <input type="checkbox"></input> 
-</p>		<p>Athletics: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Awareness: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Brawl: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Computers: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Dodge: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Drive: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Empathy: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Firearms: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Intimidation: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Investigation: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Leadership: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Medicine: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Melee: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Occult: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Security: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Stealth: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input>
-</p>		<p>Streetwise: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Subterfuge: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Survival: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input type="checkbox"></input></p>
+				<!-------------------------------------------------TRACKERS--------------------------------------------------------->
+			<div id="trackers"> 
+				<div name="quint">
+					Quintessence:
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+					<input type="checkbox">
+				</div>
+				<div>
+					Tass:<input name="tass" type="number">
+				</div>
+				<div name="will">
+					<h3>Willpower:</h3>
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" /><!--1 disapears without stam-->
+				</div>
+				<div name="health">
+					<h2>Health Levels:</h2>
+					<div>
+						<h3>Healthy</h3>
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" /><!-- 4 State buttons off, /,X,* (1 disapears without stam) -->
+					</div>
+					<div>
+						<h3>Injured</h3>
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" /><!-- 4 4 State dots (1 disapears without stam)-->
+					</div>
+					<div>
+						<h3>Incapacitated</h3>
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" /><!-- 4 4 State dots-->
+					</div>
+				</div>
+				<div name="paradox">
+					<h3>Pardox</h3>
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+					<input type="checkbox" />
+				</div>
 			</div>
-		
-			<div id="skill_2">
-			<p>Academics: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> 		<input type="checkbox"></input> 		Specialties: <input> </input><input> </input><input> </input><input> </input><input> </input><input> </input>
-</p>		<p>Linguistics: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"					></input> <input type="checkbox"></input>Specialties: <input> </input><input> </input><input> </input><input> </input><input> </input><input> </input>
-</p>		<p>Lore: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> 				<input type="checkbox"></input> 			Specialties: <input> </input><input> </input><input> </input><input> </input><input> </input><input> </input>
-			
-</p>		<p>Crafts: 		Specialty: <input> </input> 
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Performance:	Specialty: <input> </input> 
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> 
-</p>		<p>Science:		Specialty: <input> </input> 
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>	Other:	<select name="oSkill_1" class="drop">
-						<option value=""></option>
-						<option value="science">Science</option>
-						<option value="perform">Performance</option>
-						<option value="crafts">Crafts</option>
+			<!-----------------------------------------------ATTRIBUTES--------------------------------------------------------------------->
+			<div id="attributes"> <!-- top 5 dissapear either with less enl or with the spending of xP on other att-->
+				<div>
+					<h3>Mental:</h3>
+					<div name="ment">
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>
+						<h3>Focus</h3>
+						<input name="int" type="checkbox" />Intellegence
+						<input name="wis" type="checkbox" />Wisdom
+						<input name="wit" type="checkbox" />Wits
+					</div>
+				</div>
+				<div>
+					<h3>Physical</h3>
+					<div name="phys">
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>
+						<h3>Focus</h3>
+						<input name="sta" type="checkbox" />Stamina
+						<input name="dex" type="checkbox" />Dexterity
+						<input name="str" type="checkbox" />Strength
+					</div>
+				</div>
+				<div>
+					<h3>Social</h3> 
+					<div name="soci">
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>
+						<h3>Focus</h3>
+						<input name="cha" type="checkbox" />Charisma 
+						<input name="man" type="checkbox" />Manipulation
+						<input name="app" type="checkbox" />Appearance
+					</div>
+				</div>
+			</div>
+			<!--------------------NAMES DONE TO HERE--------------------------SKILLS------------------------------------------>
+			<div id="skill"> <!--most of the time at 5 unless Skilled is taken -->
+					<div id="skill_1">
+						<div>
+							<h3>Animal Ken</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Athletics</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Awareness</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Brawl</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Computers</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Dodge</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Drive</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Empathy</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Firearms</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Intimidation</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Leadership</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Medicine</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Melee</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Occult</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Security</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Stealth</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Streetwise</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Subterfuge</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Survival</h3> 
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+					</div>
+					<div id="skill_2">
+						<div>
+							<div>
+								<h3>Academics</h3>
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+							</div>
+							<div>
+								<h3>Specialties</h3>
+								<input /><input /><input /><input /><input /><input />
+							</div>
+						</div>	
+						<div>
+							<div>
+								<h3>Linguini</h3>
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+							</div>
+							<div>
+								<h3>Specialties</h3>
+								<input /><input /><input /><input /><input /><input />
+							</div>
+						</div>
+						<div>
+							<div>
+								<h3>Lore</h3>
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+								<input type="checkbox" />
+							</div>
+							<div>
+								<h3>Specialties</h3>
+								<input /><input /><input /><input /><input /><input />
+							</div>
+						</div>
+						<div>
+							<h3>Crafts</h3> 	
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Performance</h3> 	
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Science</h3> 	
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Other</h3>
+							<select name="oSkill_1">
+								<option value=""></option>
+								<option value="science">Science</option>
+								<option value="perform">Performance</option>
+								<option value="crafts">Crafts</option>
+							</select>
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Other</h3>
+							<select name="oSkill_1">
+								<option value=""></option>
+								<option value="science">Science</option>
+								<option value="perform">Performance</option>
+								<option value="crafts">Crafts</option>
+							</select>
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Other</h3>
+							<select name="oSkill_1">
+								<option value=""></option>
+								<option value="science">Science</option>
+								<option value="perform">Performance</option>
+								<option value="crafts">Crafts</option>
+							</select>
+							<div>Specialty<input /></div>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+					</div>
+				</div>	
+			<!----------------------------------------------BACKGROUNDS------------------------------------------------------------->
+			<div id="backgrounds"> 
+					<div id="backgrounds_1">
+						<div>
+							<h3>Acolyte</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Alternate ID</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Enlightenment</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Fame</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Familliar</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Node</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Past Lives</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Resources</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+						<div>
+							<h3>Wonder</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+						</div>
+					</div>	
+					<div id="backgrounds_2">
+						<div>
+							<h3>Allies</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input />
+							<input />
+							<input />
+							<input />
+							<input /> 
+						</div>
+						<div>
+							<h3>Contacts</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input />
+							<input />
+							<input />
+							<input />
+							<input /> 
+						</div>
+						<div>
+							<h3>Elite Influence</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input />
+							<input />
+							<input />
+							<input />
+							<input /> 
+						</div>
+						<div>
+							<h3>Underworld Influence</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input />
+							<input />
+							<input />
+							<input />
+							<input /> 
+						</div>
+						<div>
+							<h3>Sanctum</h3>
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input />
+							<input />
+							<input />
+							<input />
+							<input /> 
+						</div>		
+						<div>
+							<h3>Other</h3>
+							<select name="oBgnd_1">
+								<option value=""></option>
+								<option value="alyt">Acolyte</option>
+								<option value="altId">Alternate Identity</option>
+								<option value="sanct">Sanctum</option>
+							</select>
+							<input />
+							<input />
+							<input />
+							<input />
+							<input />			
+						</div><div>
+							<h3>Other</h3>
+							<select name="oBgnd_2">
+								<option value=""></option>
+								<option value="alyt">Acolyte</option>
+								<option value="altId">Alternate Identity</option>
+								<option value="sanct">Sanctum</option>
+							</select>
+							<input />
+							<input />
+							<input />
+							<input />
+							<input />			
+						</div>
+						<div>
+							<h3>Other</h3>
+							<select name="oBgnd_3">
+								<option value=""></option>
+								<option value="alyt">Acolyte</option>
+								<option value="altId">Alternate Identity</option>
+								<option value="sanct">Sanctum</option>
+							</select>
+							<input />
+							<input />
+							<input />
+							<input />
+							<input />			
+						</div>
+					</div>
+				</div>
+			<!---------------------------------------SPHERES------------------------------------------------->
+			<div id="spheres">
+					Spheres
+					<div>Correspondence
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Entropy
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Forces
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Life
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Matter
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Mind
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Prime
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Spirit
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>Time
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+				</div>	
+			<!--------------------------------------MERITS-------------------------------------------------->	
+			<div id="merits">
+					Merits
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+				</div>
+			<!-------------------------------------------------FLAWS--------------------------------------->
+			<div id="flaws">
+				<div>
+					Flaw
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+					<input />
+				</div>
+					<div id="paradox_flaws">Paradox Flaws</div>
+				</div>
+			<!------------------------------------------------EQMT---------------------------------------->
+			<div id="equipment"> 
+					<div>Name:<input /></div>
+					<div>Type:
+						<select>
+							<option value="weapon">Weapon</option>
+							<option value="armor">Armor</option>
+							<option value="misc">Misc</option>
 						</select>
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>	Other: 	<select name="oSkill_1" class="drop">
-						<option value=""></option>
-						<option value="science">Science</option>
-						<option value="perform">Performance</option>
-						<option value="crafts">Crafts</option>
-						</select> 
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>	Other: 	<select name="oSkill_1" class="drop">
-						<option value=""></option>
-						<option value="science">Science</option>
-						<option value="perform">Performance</option>
-						<option value="crafts">Crafts</option>
-						</select> 
-				<input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			</div>
+					</div>
+					<div>
+						Wonder Level:
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+						<input type="checkbox" />
+					</div>
+					<div>
+						<div>Equipment Quality:<input /></div>
+						<div>Equipment Quality:<input /></div>
+						<button id="addQ">+</button>
+					</div>
+					<div>Craft Quality:<input /></div>
+					<div>
+						<div>Cantrip:<input /></div>
+						<button id="addC">+</button>
+					</div>
+					<div>
+						<div>Wonder Quality:<input /></div>
+						<button id="addW">+</button>
+					</div>
+				</div>	
+			<!-------------------------------------------------------FLUFF--------------------------------->
+			<div id="alt_ids">
+					Alt IDs:
+					<button name="addI">+</button><!-- Add New id Button -->		
+				</div>
+			<div id="alyt">
+					Acolytes:
+					<button name="addA">+</button><!-- Add New alyt Button -->
+				</div>
+			<div id="drgmt">
+					Derangements:
+					<button name="addD">+</button><!-- Add New Derangement Button -->		
+				</div>
+			<div id="ties">
+					Character Ties:
+					<button name="addT">+</button><!-- Add New Ties Button -->
+				</div>
+			<textarea id="notes" rows="10" cols="30" placeholder="Notes"></textarea>
+			<!-------------------------------------------------------Extras--------------------------------->
+			XP Plan
+			List
+			<!--User--> Key - Planning Dots, Normal Dots, Free Dots
 		</div>
-		
-	<!----------------------------------------------BACKGROUNDS------------------------------------------------------------->
-	
-		<div id="backgrounds"> 
-			<div id="backgrounds_1">
-			<p>Acolyte <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Alt ID <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Enlightenment <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Fame <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Familliar <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Node <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Past Lives <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Resources <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-</p>		<p>Wonder <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input>
-			</div>
-			
-			<div id="backgrounds_2">
-			<p>Allies <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input> </input><input></input><input> </input><input> </input><input> </input>
-			</p><p>Contacts  <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input> </input><input> </input><input> </input><input> </input><input> </input>
-			</p><p>Elite Influence <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input> </input><input> </input><input> </input><input> </input><input> </input>
-			</p><p>Underworld Influence <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input> </input><input> </input><input> </input><input> </input><input> </input>
-			</p><p>Sanctum <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input><input> </input><input> </input><input> </input><input> </input><input> </input>
-				
-</p>			<p>	Other: 	<select name="oBgnd_1">
-						<option value=""></option>
-						<option value="alyt">Acolyte</option>
-						<option value="altId">Alternate Identity</option>
-						<option value="sanct">Sanctum</option>
-						</select>
-						
-				<input> </input><input> </input><input> </input><input> </input><input> </input>
-				
-</p>			<p>	Other: 	<select name="oBgnd_2">
-						<option value=""></option>
-						<option value="alyt">Acolyte</option>
-						<option value="altId">Alternate Identity</option>
-						<option value="sanct">Sanctum</option>
-						</select>
-						
-				<input> </input><input> </input><input> </input><input> </input><input> </input>
-				
-</p>			<p>	Other: 	<select name="oBgnd_3">
-						<option value=""></option>
-						<option value="alyt">Acolyte</option>
-						<option value="altId">Alternate Identity</option>
-						<option value="sanct">Sanctum</option>
-						</select>
-					
-			<input> </input><input> </input><input> </input><input> </input><input> </input>
-			</div></p>
-		</div>
-		
-		<!---------------------------------------SPHERES------------------------------------------------->
-		
-		<div id="spheres">
-		<p>Spheres
-			<p>Correspondence <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Entropy <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Forces <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Life <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Matter <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Mind <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Prime <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Spirit <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Time <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-				
-		</p></div>
-		
-		<!--------------------------------------MERITS-------------------------------------------------->
-		
-		<div id="merits">
-		<p>Merits <input> </input><input> </input><input> </input><input> </input><input> </input><input> </input><input> </input>
-		</p></div>
-		
-		<!-------------------------------------------------FLAWS--------------------------------------->
-		
-		<div id="flaws">
-		<p>Flaw <input> </input><input> </input><input> </input><input> </input><input> </input><input> </input><input> </input> </p>
-			<div id="paradox_flaws"> 
-			<p>Paradox Flaws</p>
-			</div>
-		</div>
-		
-		<!------------------------------------------------EQMT---------------------------------------->
-		
-		<div id="equipment"> 
-			<p>Name: <input> </input></p>
-			<p>Type: <select></p>
-						<option value="weapon">Weapon</option></p>
-						<option value="armor">Armor</option></p>
-						<option value="misc">Misc</option></p>
-					</select>
-			<p>Wonder Level: <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input> <input type="checkbox"></input></p>
-			<p>Equip. Quality: <input> </input></p>
-			<p>Equip. Quality: <input> </input></p>
-					<p> <button name="addQ"> + </button></p>
-				<p>Craft Quality: <input> </input></p>
-				<p>Cantrip: <input> </input></p>
-					<p> <button name="addC"> + </button></p>
-				<p>Wonder Quality: <input> </input></p>
-					<p> <button name="addW"> + </button></p>
-				
-		</div>
-		
-		<!-------------------------------------------------------FLUFF--------------------------------->
-		
-		<div id="alt_ids">
-		Alt IDs:
-			<p> <button name="addI"> + </button> </p><!-- Add New id Button -->		
-		</div>
-		
-		<div id="alyt">
-		Acolytes:
-			<p> <button name="addA"> + </button> </p><!-- Add New alyt Button -->
-		</div>
-		
-		<div id="drgmt">
-		Derangements:
-			<p> <button name="addD"> + </button> </p><!-- Add New Derangement Button -->		
-		</div>
-		
-		<div id="ties">
-		Character Ties:
-			<p> <button name="addT"> + </button> </p><!-- Add New Ties Button -->
-		</div>
-		
-		<div id="notes">
-			<textarea name="notes" rows="10" cols="30">
-			Notes
-			</textarea>
-		</div>
-		
-		<!-------------------------------------------------------Extras--------------------------------->
-		
-		XP Plan
-		List
-		
-		<!--User--> Key - Planning Dots, Normal Dots, Free Dots
-		
-		
-		
 	</body>
-
 	<footer>
 	<script src="main.js" > </script>
 	</footer>
