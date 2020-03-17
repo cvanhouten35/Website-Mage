@@ -1,0 +1,1 @@
+Math.prototype.TAU = Math.PI * 2
