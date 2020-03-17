@@ -29,5 +29,9 @@ function createCharSheet() {
 window.onload =_=> {
 	document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
 	document.getElementById("create").addEventListener("click", createCharSheet)
+	
+	let swirl = new Swirl(document.getElementById("swirl").getContext("2d"))
+	
+	swirl.initParticles(2)
+	swirl.drawParticles()
 }
-

@@ -1,1 +1,1 @@
-Math.prototype.TAU = Math.PI * 2
+Object.defineProperty(Math, "TAU", { value: Math.PI * 2 })
