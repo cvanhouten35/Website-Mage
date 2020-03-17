@@ -37,7 +37,7 @@ addD = Add Derangements
 addI = Add Alt IDs
 addT = Add character Ties
 quint = Quintessence
-alyt = Acolyte
+acolyte = Acolyte
 altId = Alternate Identity
 sanct = Santum 
 drgmt = Derangement
@@ -61,10 +61,19 @@ vEmail = VST email
 dEmail = DC email
 dSave = Digital Save
 pSave = Printable save
+corre = Correspondence
+
+LIBRARY COLORS -
+	primary (aka Dark Blue) = Normal Dots
+	success (aka green) = Free Dots
+	info (aka light blue) = 
+
+
 -->
 
 <html>
 	<head>
+		<link rel="stylesheet" href="css/pretty-check.css">
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
@@ -578,9 +587,9 @@ pSave = Printable save
 							</div>
 						</div>
 						<!-- id done to here -->
-						<div>
+						<div id="crafts">
 							<h3>Crafts</h3> 	
-							<div>Specialty<input /></div>
+							<div id="crafts_spec">Specialty<input /></div>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -588,9 +597,9 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="performance">
 							<h3>Performance</h3> 	
-							<div>Specialty<input /></div>
+							<div id="performance_spec">Specialty<input /></div>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -598,9 +607,9 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="science">
 							<h3>Science</h3> 	
-							<div>Specialty<input /></div>
+							<div id="science_spec">Specialty<input /></div>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -608,47 +617,16 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<button>+</button> <!-- Add other skill-->
+						<div id="oSkill">
 							<h3>Other</h3>
-							<select id="oSkill_1">
+							<select id="oSkill_drop">
 								<option value=""></option>
 								<option value="science">Science</option>
 								<option value="perform">Performance</option>
 								<option value="crafts">Crafts</option>
 							</select>
-							<div>Specialty<input /></div>
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-						</div>
-						<div>
-							<h3>Other</h3>
-							<select id="oSkill_1">
-								<option value=""></option>
-								<option value="science">Science</option>
-								<option value="perform">Performance</option>
-								<option value="crafts">Crafts</option>
-							</select>
-							<div>Specialty<input /></div>
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-							<input type="checkbox" />
-						</div>
-						<div>
-							<h3>Other</h3>
-							<select id="oSkill_1">
-								<option value=""></option>
-								<option value="science">Science</option>
-								<option value="perform">Performance</option>
-								<option value="crafts">Crafts</option>
-							</select>
-							<div>Specialty<input /></div>
+							<div id="oSkill_spec">Specialty<input /></div>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -661,7 +639,7 @@ pSave = Printable save
 			<!----------------------------------------------BACKGROUNDS------------------------------------------------------------->
 			<div id="backgrounds"> 
 					<div id="backgrounds_1">
-						<div>
+						<div id="acolyte">
 							<h3>Acolyte</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -669,7 +647,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="altId">
 							<h3>Alternate ID</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -677,7 +655,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="enl">
 							<h3>Enlightenment</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -685,7 +663,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="fame">
 							<h3>Fame</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -693,7 +671,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="familliar">
 							<h3>Familliar</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -701,7 +679,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="node">
 							<h3>Node</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -709,7 +687,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="past_lives">
 							<h3>Past Lives</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -717,7 +695,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="resources">
 							<h3>Resources</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -725,7 +703,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="wonder">
 							<h3>Wonder</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -735,174 +713,165 @@ pSave = Printable save
 						</div>
 					</div>	
 					<div id="backgrounds_2">
-						<div>
+						<div id="allies">
 							<h3>Allies</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
-							<input />
-							<input />
-							<input />
-							<input />
-							<input /> 
+							<div id="allies_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div>
 						</div>
-						<div>
+						<div id="contacts">
 							<h3>Contacts</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
-							<input />
-							<input />
-							<input />
-							<input />
-							<input /> 
+							<div id="contacts_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div> 
 						</div>
-						<div>
+						<div id="eInfluence">
 							<h3>Elite Influence</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
-							<input />
-							<input />
-							<input />
-							<input />
-							<input /> 
+							<div id="eInfluence_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div>
 						</div>
-						<div>
+						<div id="uInfluence">
 							<h3>Underworld Influence</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
-							<input />
-							<input />
-							<input />
-							<input />
-							<input /> 
+							<div id="uInfluence_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div> 
 						</div>
-						<div>
+						<div id="sanctum">
 							<h3>Sanctum</h3>
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
 							<input type="checkbox" />
-							<input />
-							<input />
-							<input />
-							<input />
-							<input /> 
-						</div>		
-						<div>
-							<h3>Other</h3>
-							<select id="oBgnd_1">
-								<option value=""></option>
-								<option value="alyt">Acolyte</option>
-								<option value="altId">Alternate Identity</option>
-								<option value="sanct">Sanctum</option>
-							</select>
-							<input />
-							<input />
-							<input />
-							<input />
-							<input />			
-						</div><div>
-							<h3>Other</h3>
-							<select id="oBgnd_2">
-								<option value=""></option>
-								<option value="alyt">Acolyte</option>
-								<option value="altId">Alternate Identity</option>
-								<option value="sanct">Sanctum</option>
-							</select>
-							<input />
-							<input />
-							<input />
-							<input />
-							<input />			
+							<div id="santum_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div> 
 						</div>
-						<div>
+						<button>+</button> <!-- Add other background-->
+						<div id="oBgnd">
 							<h3>Other</h3>
-							<select id="oBgnd_3">
+							<select id="oBgnd_drop">
 								<option value=""></option>
-								<option value="alyt">Acolyte</option>
+								<option value="acolyte">Acolyte</option>
 								<option value="altId">Alternate Identity</option>
 								<option value="sanct">Sanctum</option>
 							</select>
-							<input />
-							<input />
-							<input />
-							<input />
-							<input />			
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<input type="checkbox" />
+							<div id="oBgnd_spec">
+								<input />
+								<input />
+								<input />
+								<input />
+								<input /> 
+							</div>			
 						</div>
 					</div>
 				</div>
 			<!---------------------------------------SPHERES------------------------------------------------->
 			<div id="spheres">
 					Spheres
-					<div>Correspondence
+					<div id="corre">Correspondence
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Entropy
+					<div id="entropy">Entropy
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Forces
+					<div id="forces">Forces
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Life
+					<div id="life">Life
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Matter
+					<div id="matter">Matter
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Mind
+					<div id="mind">Mind
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Prime
+					<div id="prime">Prime
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Spirit
+					<div id="spirit">Spirit
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
 					</div>
-					<div>Time
+					<div id="time">Time
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
@@ -913,27 +882,35 @@ pSave = Printable save
 			<!--------------------------------------MERITS-------------------------------------------------->	
 			<div id="merits">
 					Merits
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
+					<input type="number"/><input /> 
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
 				</div>
 			<!-------------------------------------------------FLAWS--------------------------------------->
-			<div id="flaws">
-				<div>
+			<div id="flaws_full">
+				<div id="flaws">
 					Flaw
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
-					<input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
+					<input type="number"/><input />
 				</div>
-					<div id="paradox_flaws">Paradox Flaws</div>
+					<div id="paradox_flaws">
+						Paradox Flaws
+						<button>+</button> <!-- Add other p flaw-->
+						<div>
+						<input placeholder="Flaw"/>
+						Receive Date<input type="date"/>
+						Fade Date<input type="date"/>
+						</div>
+					</div>
 				</div>
 			<!------------------------------------------------EQMT---------------------------------------->
 			<div id="equipment"> 
@@ -973,9 +950,9 @@ pSave = Printable save
 					Alt IDs:
 					<button id="addI">+</button><!-- Add New id Button -->		
 				</div>
-			<div id="alyt">
+			<div id="acolyte">
 					Acolytes:
-					<button id="addA">+</button><!-- Add New alyt Button -->
+					<button id="addA">+</button><!-- Add New acolyte Button -->
 				</div>
 			<div id="drgmt">
 					Derangements:
@@ -987,8 +964,11 @@ pSave = Printable save
 				</div>
 			<textarea id="notes" rows="10" cols="30" placeholder="Notes"></textarea>
 			<!-------------------------------------------------------Extras--------------------------------->
+			<div id="xp_plan">
 			XP Plan
-			List
+			<ol>
+			</ol>
+			</div>
 			<!--User--> Key - Planning Dots, Normal Dots, Free Dots
 		</div>
 	</body>
