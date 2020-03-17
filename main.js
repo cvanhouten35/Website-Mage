@@ -21,7 +21,13 @@ function loadCharSheet() {
 	prompt("Place your import code here!")
 }
 
+function createCharSheet() {
+	event.target.parentNode.parentNode.classList.add("no-display")
+	document.getElementById("main").classList.remove("no-display")
+}
+
 window.onload =_=> {
 	document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
+	document.getElementById("create").addEventListener("click", createCharSheet)
 }
 

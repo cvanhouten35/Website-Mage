@@ -86,25 +86,25 @@ pSave = Printable save
 			</div>
 			<div id="player_information">
 				<div>
-					Player Name:<input name="player" />
+					Player Name:<input id="player" />
 				</div>
 				<div>
-					Email Address:<input name="pEmail" />
+					Email Address:<input id="pEmail" />
 				</div>
 				<div>
-					Membership ID:<input name="mesId" />
+					Membership ID:<input id="mesId" />
 				</div>
 				<div>
-					Venue Storyteller:<input name="vst" />
+					Venue Storyteller:<input id="vst" />
 				</div>
 				<div>
-					VST Email:<input name="vEmail" />
+					VST Email:<input id="vEmail" />
 				</div>
 				<div>
-					Domian Coordinator:<input name="dc" />
+					Domian Coordinator:<input id="dc" />
 				</div>
 				<div>
-					DC Email:<input name="dEmail" />
+					DC Email:<input id="dEmail" />
 				</div>
 			</div>
 			<!---------------------------------CHARACTER INFO------------------------------------------------------>	
@@ -116,7 +116,7 @@ pSave = Printable save
 					<div class="drop">
 						<div>
 							Sect:
-							<select name="sect" class="drop">
+							<select id="sect" class="drop">
 								<option value="TN">Council of Nine Magickal Traditions</option>
 								<option value="TT">Technocratic Union</option>
 								<option value="DT">Disparates</option>
@@ -126,7 +126,7 @@ pSave = Printable save
 						</div>
 						<div>
 							Affiliation:
-							<select name="aff" class="drop">
+							<select id="aff" class="drop">
 								<option value="AY">Akashayana</option>
 								<option value="CC">Celestial Chorus</option>
 								<option value="CE">Cult of Ecstasy</option>
@@ -143,21 +143,21 @@ pSave = Printable save
 							House:<input id="house" />
 						</div>
 						<div>
-							Creation Date:<input name="ccDate" />
+							Creation Date:<input id="ccDate" />
 						</div>
 					</div>
 				</div>
 				<div id="character_information_2">
 					<div>
-						Concept:<input name="concept" />
+						Concept:<input id="concept" />
 					</div>
 					<div>
-						Archetype:<input name="arch" />
+						Archetype:<input id="arch" />
 					</div>
 					<div>
-						Native Language:<input name="nLang" />
+						Native Language:<input id="nLang" />
 					</div>
-					<div name="enl">
+					<div id="enl">
 						Enlightenment:
 						<input type="checkbox" />
 						<input type="checkbox" />
@@ -166,13 +166,13 @@ pSave = Printable save
 						<input type="checkbox" />
 					</div>
 					<div>
-						Date of Birth:<input name="age" type="date" />
+						Date of Birth:<input id="age" type="date" />
 					</div>
 					<div>
-						Awakening Date:<input name="awake" type="date" />
+						Awakening Date:<input id="awake" type="date" />
 					</div>
 					<div>
-						Apparent Age:<input name="aAge" type="number" />
+						Apparent Age:<input id="aAge" type="number" />
 					</div>
 				</div>
 			</div>
@@ -181,36 +181,36 @@ pSave = Printable save
 					Floor:<span id="FRXP"></span>
 				</div>
 				<div>
-					Earned:<span name="EXP"></span>
+					Earned:<span id="EXP"></span>
 				</div>
 				<div>
-					Attributes:<span name="AXP"></span>
+					Attributes:<span id="AXP"></span>
 				</div>
 				<div>
-					Backgrounds:<span name="BXP"></span>
+					Backgrounds:<span id="BXP"></span>
 				</div>
 				<div>
-					Spheres:<span name="SPXP"></span>
+					Spheres:<span id="SPXP"></span>
 				</div>
 				<div>
-					Flaws:<span name="FWXP"></span>
+					Flaws:<span id="FWXP"></span>
 				</div>
 				<div>
-					Merits:<span name="MXP"></span>
+					Merits:<span id="MXP"></span>
 				</div>
 				<div>
-					Skills:<span name="SKXP"></span>
+					Skills:<span id="SKXP"></span>
 				</div>
 				<div>
-					Total Spent:<span name="TSXP"></span>
+					Total Spent:<span id="TSXP"></span>
 				</div>
 				<div>
-					Remaining XP:<span name="RXP"></span>
+					Remaining XP:<span id="RXP"></span>
 				</div>
 			</div>
 				<!-------------------------------------------------TRACKERS--------------------------------------------------------->
 			<div id="trackers"> 
-				<div name="quint">
+				<div id="quint">
 					Quintessence:
 					<input type="checkbox">
 					<input type="checkbox">
@@ -229,9 +229,9 @@ pSave = Printable save
 					<input type="checkbox">
 				</div>
 				<div>
-					Tass:<input name="tass" type="number">
+					Tass:<input id="tass" type="number">
 				</div>
-				<div name="will">
+				<div id="will">
 					<h3>Willpower:</h3>
 					<input type="checkbox" />
 					<input type="checkbox" />
@@ -241,7 +241,7 @@ pSave = Printable save
 					<input type="checkbox" />
 					<input type="checkbox" /><!--1 disapears without stam-->
 				</div>
-				<div name="health">
+				<div id="health">
 					<h2>Health Levels:</h2>
 					<div>
 						<h3>Healthy</h3>
@@ -265,7 +265,7 @@ pSave = Printable save
 						<input type="checkbox" /><!-- 4 4 State dots-->
 					</div>
 				</div>
-				<div name="paradox">
+				<div id="paradox">
 					<h3>Pardox</h3>
 					<input type="checkbox" />
 					<input type="checkbox" />
@@ -279,7 +279,7 @@ pSave = Printable save
 			<div id="attributes"> <!-- top 5 dissapear either with less enl or with the spending of xP on other att-->
 				<div>
 					<h3>Mental:</h3>
-					<div name="ment">
+					<div id="ment">
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
@@ -298,14 +298,14 @@ pSave = Printable save
 					</div>
 					<div>
 						<h3>Focus</h3>
-						<input name="int" type="checkbox" />Intellegence
-						<input name="wis" type="checkbox" />Wisdom
-						<input name="wit" type="checkbox" />Wits
+						<input id="int" type="checkbox" />Intellegence
+						<input id="wis" type="checkbox" />Wisdom
+						<input id="wit" type="checkbox" />Wits
 					</div>
 				</div>
 				<div>
 					<h3>Physical</h3>
-					<div name="phys">
+					<div id="phys">
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
@@ -324,14 +324,14 @@ pSave = Printable save
 					</div>
 					<div>
 						<h3>Focus</h3>
-						<input name="sta" type="checkbox" />Stamina
-						<input name="dex" type="checkbox" />Dexterity
-						<input name="str" type="checkbox" />Strength
+						<input id="sta" type="checkbox" />Stamina
+						<input id="dex" type="checkbox" />Dexterity
+						<input id="str" type="checkbox" />Strength
 					</div>
 				</div>
 				<div>
 					<h3>Social</h3> 
-					<div name="soci">
+					<div id="soci">
 						<input type="checkbox" />
 						<input type="checkbox" />
 						<input type="checkbox" />
@@ -350,16 +350,16 @@ pSave = Printable save
 					</div>
 					<div>
 						<h3>Focus</h3>
-						<input name="cha" type="checkbox" />Charisma 
-						<input name="man" type="checkbox" />Manipulation
-						<input name="app" type="checkbox" />Appearance
+						<input id="cha" type="checkbox" />Charisma 
+						<input id="man" type="checkbox" />Manipulation
+						<input id="app" type="checkbox" />Appearance
 					</div>
 				</div>
 			</div>
 			<!--------------------NAMES DONE TO HERE--------------------------SKILLS------------------------------------------>
 			<div id="skill"> <!--most of the time at 5 unless Skilled is taken -->
 					<div id="skill_1">
-						<div>
+						<div id="animal_ken">
 							<h3>Animal Ken</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -368,7 +368,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="athletics">
 							<h3>Athletics</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -377,7 +377,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="awareness">
 							<h3>Awareness</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -386,7 +386,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="brawl">
 							<h3>Brawl</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -395,7 +395,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="computers">
 							<h3>Computers</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -404,7 +404,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="dodge">
 							<h3>Dodge</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -413,7 +413,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="drive">
 							<h3>Drive</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -422,7 +422,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="empathy">
 							<h3>Empathy</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -431,7 +431,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="firearms">
 							<h3>Firearms</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -440,7 +440,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="intimidation">
 							<h3>Intimidation</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -449,7 +449,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div  id="leadership">
 							<h3>Leadership</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -458,7 +458,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div  id="medicine">
 							<h3>Medicine</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -467,7 +467,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="melee">
 							<h3>Melee</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -476,7 +476,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="occult">
 							<h3>Occult</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -485,7 +485,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="security">
 							<h3>Security</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -494,7 +494,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="stealth">
 							<h3>Stealth</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -503,7 +503,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="streetwise">
 							<h3>Streetwise</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -512,7 +512,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="subterfuge">
 							<h3>Subterfuge</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -521,7 +521,7 @@ pSave = Printable save
 							<input type="checkbox" />
 							<input type="checkbox" />
 						</div>
-						<div>
+						<div id="survival">
 							<h3>Survival</h3> 
 							<input type="checkbox" />
 							<input type="checkbox" />
@@ -532,8 +532,8 @@ pSave = Printable save
 						</div>
 					</div>
 					<div id="skill_2">
-						<div>
-							<div>
+						<div id="academics_full">
+							<div id="academics">
 								<h3>Academics</h3>
 								<input type="checkbox" />
 								<input type="checkbox" />
@@ -542,14 +542,14 @@ pSave = Printable save
 								<input type="checkbox" />
 								<input type="checkbox" />
 							</div>
-							<div>
+							<div id="academic_spec">
 								<h3>Specialties</h3>
 								<input /><input /><input /><input /><input /><input />
 							</div>
 						</div>	
-						<div>
-							<div>
-								<h3>Linguini</h3>
+						<div id="linguistics_full">
+							<div id="linguistics">
+								<h3>Linguistics</h3>
 								<input type="checkbox" />
 								<input type="checkbox" />
 								<input type="checkbox" />
@@ -557,13 +557,13 @@ pSave = Printable save
 								<input type="checkbox" />
 								<input type="checkbox" />
 							</div>
-							<div>
+							<div id="linguistics_spec">
 								<h3>Specialties</h3>
 								<input /><input /><input /><input /><input /><input />
 							</div>
 						</div>
-						<div>
-							<div>
+						<div id="lore_full">
+							<div id="lore">
 								<h3>Lore</h3>
 								<input type="checkbox" />
 								<input type="checkbox" />
@@ -572,11 +572,12 @@ pSave = Printable save
 								<input type="checkbox" />
 								<input type="checkbox" />
 							</div>
-							<div>
+							<div id="lore_spec">
 								<h3>Specialties</h3>
 								<input /><input /><input /><input /><input /><input />
 							</div>
 						</div>
+						<!-- id done to here -->
 						<div>
 							<h3>Crafts</h3> 	
 							<div>Specialty<input /></div>
@@ -609,7 +610,7 @@ pSave = Printable save
 						</div>
 						<div>
 							<h3>Other</h3>
-							<select name="oSkill_1">
+							<select id="oSkill_1">
 								<option value=""></option>
 								<option value="science">Science</option>
 								<option value="perform">Performance</option>
@@ -625,7 +626,7 @@ pSave = Printable save
 						</div>
 						<div>
 							<h3>Other</h3>
-							<select name="oSkill_1">
+							<select id="oSkill_1">
 								<option value=""></option>
 								<option value="science">Science</option>
 								<option value="perform">Performance</option>
@@ -641,7 +642,7 @@ pSave = Printable save
 						</div>
 						<div>
 							<h3>Other</h3>
-							<select name="oSkill_1">
+							<select id="oSkill_1">
 								<option value=""></option>
 								<option value="science">Science</option>
 								<option value="perform">Performance</option>
@@ -801,7 +802,7 @@ pSave = Printable save
 						</div>		
 						<div>
 							<h3>Other</h3>
-							<select name="oBgnd_1">
+							<select id="oBgnd_1">
 								<option value=""></option>
 								<option value="alyt">Acolyte</option>
 								<option value="altId">Alternate Identity</option>
@@ -814,7 +815,7 @@ pSave = Printable save
 							<input />			
 						</div><div>
 							<h3>Other</h3>
-							<select name="oBgnd_2">
+							<select id="oBgnd_2">
 								<option value=""></option>
 								<option value="alyt">Acolyte</option>
 								<option value="altId">Alternate Identity</option>
@@ -828,7 +829,7 @@ pSave = Printable save
 						</div>
 						<div>
 							<h3>Other</h3>
-							<select name="oBgnd_3">
+							<select id="oBgnd_3">
 								<option value=""></option>
 								<option value="alyt">Acolyte</option>
 								<option value="altId">Alternate Identity</option>
@@ -970,19 +971,19 @@ pSave = Printable save
 			<!-------------------------------------------------------FLUFF--------------------------------->
 			<div id="alt_ids">
 					Alt IDs:
-					<button name="addI">+</button><!-- Add New id Button -->		
+					<button id="addI">+</button><!-- Add New id Button -->		
 				</div>
 			<div id="alyt">
 					Acolytes:
-					<button name="addA">+</button><!-- Add New alyt Button -->
+					<button id="addA">+</button><!-- Add New alyt Button -->
 				</div>
 			<div id="drgmt">
 					Derangements:
-					<button name="addD">+</button><!-- Add New Derangement Button -->		
+					<button id="addD">+</button><!-- Add New Derangement Button -->		
 				</div>
 			<div id="ties">
 					Character Ties:
-					<button name="addT">+</button><!-- Add New Ties Button -->
+					<button id="addT">+</button><!-- Add New Ties Button -->
 				</div>
 			<textarea id="notes" rows="10" cols="30" placeholder="Notes"></textarea>
 			<!-------------------------------------------------------Extras--------------------------------->
