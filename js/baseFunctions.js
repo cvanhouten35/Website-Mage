@@ -1,5 +1,9 @@
-function rand(a, b) {
+function randWhole(a, b) {
 	return Math.floor(Math.random() * (b - a)) + a
+}
+
+function randFraction(a, b) {
+	return Math.random() * (b - a) + a
 }
 
 function rgbToHex(array_of_rgb) {

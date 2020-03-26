@@ -23,18 +23,20 @@ function loadCharSheet() {
 
 function createCharSheet() {
 	event.target.parentNode.parentNode.classList.add("no-display")
-	document.getElementById("main").classList.remove("no-display")
+	document.getElementById("character_creation_screen").classList.remove("no-display")
 }
 
-//var vec = new Vector(300, 300)
-//var canvas = document.getElementById("swirl").getContext("2d")
+function nextStep() {
+	let step = Number(event.target.dataset.step)
+	document.getElementById("step_" + step).classList.add("no-display")
+	step += 1
+	document.getElementById("step_" + step).classList.remove("no-display")
+	
+}
+
 
 window.onload =_=> {
-	//document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
-	//document.getElementById("create").addEventListener("click", createCharSheet)
-	
-	//let swirl = new Swirl(20, .04, 10)
-	
-	//swirl.setup()
-	//swirl.drawFlowField()
+	document.getElementById("import_character").addEventListener("click", loadCharSheet)
+	document.getElementById("create_new_character").addEventListener("click", createCharSheet)
+	document.getElementById("step_next").addEventListener("click", nextStep)
 }

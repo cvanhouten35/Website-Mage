@@ -12,13 +12,6 @@ Changeling - Fall colors (Orge Yellow Brown red)
 
 */
 
-@font-face {
-	font-family: "Visitation";
-	src: url("../assets/visitation.ttf") format("truetype");
-	font-weight: normal;
-    font-style:  normal;
-}
-
 body {
 	background-color: #467b8d;
 }
@@ -65,5 +58,9 @@ button:focus {
 
 .main-page-button:active {
 	box-shadow: inset 4px 4px 14px 1px #000000;
-	
+}
+
+.background {
+	position: absolute;
+	z-index: -1;
 }
