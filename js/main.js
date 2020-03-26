@@ -1,4 +1,4 @@
-/*ON CLOSE IT WILL HAVE A DIALOG BOX THAT WILL POP UP ASKING IF YOUR SURE YOU WANNA CLOSE EBCAUSE IT WILL NOT SAVE AUTOMATICALLY AND WILL HAVE A CLOSE ANYWAY BUTTON, A SAVE NOW BUTTON AND A CANCEL BUTTON
+/*ON CLOSE IT WILL HAVE A DIALOG BOX THAT WILL POP UP ASKING IF YOUR SURE YOU WANNA CLOSE BECAUSE IT WILL NOT SAVE AUTOMATICALLY AND WILL HAVE A CLOSE ANYWAY BUTTON, A SAVE NOW BUTTON AND A CANCEL BUTTON
 	
 Have a title screen with a click any where to continue before having that fade out to have Create a New Character option, Load Exsisting Character in the center of the screen 
 	-have the load Character Sheet read Strings made by the program and load them up into the Character Screen in Play mode
@@ -16,7 +16,7 @@ Playable mode will have Quint,Willpower,Paradox,Health, and paradox flaws editab
 
 Once you have saved it will switch to play mode where the dots will no longer be editable and the planning dots will dissapear health, willpower, and Quint will be the only ones that can be changed and an Edit Character Sheet button, Load New Character Sheet will be in the upper right.
 */
-
+		
 function loadCharSheet() {
 	prompt("Place your import code here!")
 }
@@ -26,15 +26,15 @@ function createCharSheet() {
 	document.getElementById("main").classList.remove("no-display")
 }
 
-var vec = new Vector(300, 300)
-var canvas = document.getElementById("swirl").getContext("2d")
+//var vec = new Vector(300, 300)
+//var canvas = document.getElementById("swirl").getContext("2d")
 
 window.onload =_=> {
-	document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
-	document.getElementById("create").addEventListener("click", createCharSheet)
+	//document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
+	//document.getElementById("create").addEventListener("click", createCharSheet)
 	
-	let swirl = new Swirl(20, .04, 10)
+	//let swirl = new Swirl(20, .04, 10)
 	
-	swirl.setup()
-	swirl.drawFlowField()
+	//swirl.setup()
+	//swirl.drawFlowField()
 }
