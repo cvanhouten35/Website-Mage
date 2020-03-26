@@ -113,7 +113,7 @@ Supplemental Powers (Techniques/Elder Powers, Realms, Rotes)
 Equipment
 EXPERIENCE LOG
 */
-
+		
 function loadCharSheet() {
 	prompt("Place your import code here!")
 }
@@ -123,15 +123,15 @@ function createCharSheet() {
 	document.getElementById("main").classList.remove("no-display")
 }
 
-var vec = new Vector(300, 300)
-var canvas = document.getElementById("swirl").getContext("2d")
+//var vec = new Vector(300, 300)
+//var canvas = document.getElementById("swirl").getContext("2d")
 
 window.onload =_=> {
-	document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
-	document.getElementById("create").addEventListener("click", createCharSheet)
+	//document.getElementById("load_character_sheet").addEventListener("click", loadCharSheet)
+	//document.getElementById("create").addEventListener("click", createCharSheet)
 	
-	let swirl = new Swirl(20, .04, 10)
+	//let swirl = new Swirl(20, .04, 10)
 	
-	swirl.setup()
-	swirl.drawFlowField()
+	//swirl.setup()
+	//swirl.drawFlowField()
 }
