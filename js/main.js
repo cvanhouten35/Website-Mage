@@ -57,7 +57,7 @@ window.onload =_=> {
 	
 	canvasSetup("gradient")
 	canvasSetup("swirl")
-	
+
 	noise_worker = new Worker("js/calculateNoiseWorker.js")
 	noise_worker.addEventListener("message", updateNoise)
 	noise_worker.postMessage([gradient.width, gradient.height])

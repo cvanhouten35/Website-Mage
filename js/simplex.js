@@ -1,50 +1,3 @@
-const noise_array = []
-const api         = openSimplexNoise(Math.random())
-
-let width, height, z_offset
-
-z_offset = 0
-
-onmessage = function(event) {
-	width  = event.data[0]
-	height = event.data[1]
-
-	calculateNoise()
-}
-
-function calculateNoise() {
-	let y_offset, x_offset
-	
-	y_offset = 0
-	
-	for (let y = 0; y < height; y++) {
-		x_offset = 0
-		
-		for (let x = 0; x < width; x++) {
-			let i, value
-			
-			i     = (x + y * width) * 4
-			value = api.noise3D(x_offset, y_offset, z_offset)
-			value = map(-1, 1, 0, 255, value)
-			
-			noise_array[i]   = value
-			noise_array[++i] = value
-			noise_array[++i] = value
-			noise_array[++i] = 255
-			
-			x_offset += 0.001
-		}
-		y_offset += 0.001
-	}
-	z_offset += 0.001
-	
-	self.postMessage(Uint8ClampedArray.from(noise_array))
-}
-
-function map(from_min, from_max, to_min, to_max, value) {
-	return (value - from_min) * (to_max - to_min) / (from_max - from_min) + to_min
-}
-
 function openSimplexNoise(clientSeed) {
 	"use strict";
 	const SQ5 = 2.23606797749979;
@@ -290,4 +243,3 @@ function openSimplexNoise(clientSeed) {
 	}
 	return API;
 }
-
