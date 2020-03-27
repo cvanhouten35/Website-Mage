@@ -72,11 +72,16 @@ LIBRARY COLORS -
 
 <html>
 	<head>
+		<link rel="stylesheet" href="css/exposed_variables.css">
 		<link rel="stylesheet" href="css/pretty-check.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/text.css">
+		<link rel="stylesheet" href="css/background.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<canvas id="swirl" width="1000" height="1000" class="background"></canvas>
+		<canvas id="gradient" class="bg bg-base"></canvas>
+		<canvas id="swirl" class="bg bg-effect"></canvas>
 		<div id="start_screen">
 			<div class="center-logo startup-layout">
 				<img id="mage_logo" src="assets/mage_logo.png" alt="Stylized words that say 'Mage The Ascension'" />
@@ -86,7 +91,7 @@ LIBRARY COLORS -
 			</div>
 		</div>
 		<div id="character_creation_screen" class="no-display">
-			<div id="step_0">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</div>
+			<div id="step_0" class="text">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</div>
 			<div id="step_1" class="no-display">
 				<div id="player_information_setup">
 					<div>
@@ -1003,8 +1008,8 @@ LIBRARY COLORS -
 		</div>
 	</body>
 	<footer>
+		<script src="js/wrapperFunctions.js" ></script>
 		<script src="js/polyfill.js" ></script>
-		<script src="js/perlin.js" ></script>
 		<script src="js/baseFunctions.js" ></script>
 		<script src="js/classVector.js" ></script>
 		<script src="js/classParticle.js" ></script>

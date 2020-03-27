@@ -23,20 +23,44 @@ function loadCharSheet() {
 
 function createCharSheet() {
 	event.target.parentNode.parentNode.classList.add("no-display")
-	document.getElementById("character_creation_screen").classList.remove("no-display")
+	l("character_creation_screen").classList.remove("no-display")
 }
 
 function nextStep() {
 	let step = Number(event.target.dataset.step)
-	document.getElementById("step_" + step).classList.add("no-display")
+	l("step_" + step).classList.add("no-display")
 	step += 1
-	document.getElementById("step_" + step).classList.remove("no-display")
-	
+	l("step_" + step).classList.remove("no-display")	
 }
 
+function canvasSetup(canvas_id) {
+	l(canvas_id).setAttribute("width", window.innerWidth)
+	l(canvas_id).setAttribute("height", window.innerHeight)
+}
+
+const gradient         = l("gradient")
+const gradient_context = gradient.getContext("2d")
+
+let noise_array = []
+let noise_worker
+
+function updateNoise(event) {	
+	gradient_context.putImageData(new ImageData(event.data, gradient.width), 0, 0)
+
+	noise_worker.postMessage([gradient.width, gradient.height])
+}
 
 window.onload =_=> {
-	document.getElementById("import_character").addEventListener("click", loadCharSheet)
-	document.getElementById("create_new_character").addEventListener("click", createCharSheet)
-	document.getElementById("step_next").addEventListener("click", nextStep)
+	l("import_character").addEventListener("click", loadCharSheet)
+	l("create_new_character").addEventListener("click", createCharSheet)
+	l("step_next").addEventListener("click", nextStep)
+	
+	canvasSetup("gradient")
+	canvasSetup("swirl")
+	
+	noise_worker = new Worker("js/calculateNoiseWorker.js")
+	noise_worker.addEventListener("message", updateNoise)
+	noise_worker.postMessage([gradient.width, gradient.height])
 }
+
+

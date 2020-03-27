@@ -1,0 +1,11 @@
+.bg {
+	position: absolute;
+}
+
+.bg-base {
+	z-index: -2;
+}
+
+.bg-effect {
+	z-index: -1;
+}

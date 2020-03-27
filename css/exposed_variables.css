@@ -1,0 +1,29 @@
+:root {
+	--vampire-1: #262F2A;
+	--vampire-2: #E1000E;
+	--vampire-3: #692E4E;
+	--vampire-4: #425573;
+	
+	--mage-1: #5D1451;
+	--mage-2: #2F416D;
+	--mage-3: #14868C;
+	--mage-4: #94CECA;
+	
+	--werewolf-1: #A35638;
+	--werewolf-2: #E08F62;
+	--werewolf-3: #D7C79E;
+	--werewolf-4: #9DAB86;
+	
+	--changeling-1: #721B65;
+	--changeling-2: #B80D57;
+	--changeling-3: #F8615A;
+	--changeling-4: #FFD868;
+	
+	--generic-1: #39375B;
+	--generic-2: #745C97;
+	--generic-3: #D597CE;
+	--generic-4: #F5B0CB;
+	
+	--bg-color-1: #467B8D;
+	--bg-color-2: #43BD8E;
+}
