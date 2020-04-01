@@ -6,7 +6,9 @@ function randFraction(a, b) {
 	return Math.random() * (b - a) + a
 }
 
-function rgbToHex(array_of_rgb) {
+function rgbToHex(r, g, b) {
+	let array_of_rgb = [r, g, b]
+	
 	array_of_rgb.forEach((item, i) => {
 		item = item.toString(16)
 
