@@ -1,16 +1,52 @@
-.wipe-animate {
-	animation: wipe-animation linear 2s;
+.wipe-animate-left {
+	animation: wipe-animation-left cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+}
+
+.wipe-animate-right {
+	animation: wipe-animation-right cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+}
+
+.wipe-animate-bottom {
+	animation: wipe-animation-bottom cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+}
+
+.wipe-animate-top {
+	animation: wipe-animation-top cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
 }
 
 .wipe-base {
-	width: 400%;
-	height: 400%;
-	background-color: var(--generic-white);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(var(--generic-white), 1);
 	position: absolute;
 	z-index: 1;
+	transform: translate(-100%);
 }
 
-@keyframes wipe-animation {
-	0%   { transform: translateX(0) }
-	100% { transform: translateX(200%) }
+@keyframes wipe-animation-right {
+	0%   { transform: translateX(-100%); }
+	45%  { transform: translateX(-0%); }
+	55%  { transform: translateX(-0%); }
+	100% { transform: translateX(100%); }
+}
+
+@keyframes wipe-animation-top {
+	0%   { transform: translateY(100%); }
+	45%  { transform: translateY(0%); }
+	55%  { transform: translateY(0%); }
+	100% { transform: translateY(-100%); }
+}
+
+@keyframes wipe-animation-bottom {
+	0%   { transform: translateY(-100%); }
+	45%  { transform: translateY(0%); }
+	55%  { transform: translateY(0%); }
+	100% { transform: translateY(100%); }
+}
+
+@keyframes wipe-animation-left {
+	0%   { transform: translateX(100%); }
+	45%  { transform: translateX(0%); }
+	55%  { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
 }

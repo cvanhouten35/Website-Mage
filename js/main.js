@@ -22,15 +22,26 @@ function loadCharSheet() {
 }
 
 function createCharSheet() {
-	event.target.parentNode.parentNode.parentNode.classList.add("no-display")
-	l("character_creation_screen").classList.remove("no-display")
+	wipe("start_screen", "character_creation_screen")
+}
+
+function wipe(hide, show) {
+	const direction_array = ["left", "top", "bottom", "right"]
+	const direction = direction_array[randWhole(0,3)]
+	
+	l("wipe_transition").classList.add("wipe-animate-" + direction)
+	setTimeout(_=> {
+		l(hide).classList.add("no-display")
+		l(show).classList.remove("no-display")
+	}, 1000)
+	setTimeout(_=> {
+		l("wipe_transition").classList.remove("wipe-animate-" + direction)
+	}, 2000)
 }
 
 function nextStep() {
-	let step = Number(event.target.dataset.step)
-	l("step_" + step).classList.add("no-display")
-	step += 1
-	l("step_" + step).classList.remove("no-display")	
+	const step = Number(event.target.dataset.step)
+	wipe("cc_step_" + step, "cc_step_" + (step + 1))
 }
 
 function canvasSetup(canvas_id) {

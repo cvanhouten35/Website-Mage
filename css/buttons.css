@@ -46,4 +46,13 @@
 	box-shadow: none;
 }
 
+.step-button-wrapper {
+	position: absolute;
+	top: 12.5% !important;
+}
+
+.step-button {
+	width: 49%;
+	display: inline-block;
+}
 

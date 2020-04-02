@@ -86,7 +86,7 @@ LIBRARY COLORS -
 	<body>
 		<div id="gradient" class="bg bg-base"></div>
 		<canvas id="swirl" class="bg bg-effect"></canvas>
-		<div id="wipe-transition" class="wipe-base"></div>
+		<div id="wipe_transition" class="wipe-base"></div>
 		<div id="start_screen" class="full-size">
 			<div class="one-third-width two-third-height center-fully bg-static">
 				<div class="center-fully">
@@ -98,12 +98,10 @@ LIBRARY COLORS -
 			</div>
 		</div>
 		<div id="character_creation_screen" class="no-display full-size">
-			<div id="cc_step_0" class="full-size">
-				<div class="center-fully one-third-width two-third-height bg-static">
-					<p class="text-base text-center center-vertically">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</p>
-				</div>
+			<div id="cc_step_0" class="center-fully one-third-width two-third-height bg-static">
+				<p class="text-base text-center center-vertically">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</p>
 			</div>
-			<div id="cc_step_1" class="full-size no-display">
+			<div id="cc_step_1" class="no-display">
 				<div class="center-fully one-third-width two-third-height bg-static">
 					<div id="player_information_setup">
 						<div>
@@ -130,7 +128,10 @@ LIBRARY COLORS -
 					</div>
 				</div>
 			</div>
-			<button id="step_next" data-step="0">next</button>
+			<div id="step_buttons" class="one-third-width center-fully step-button-wrapper">
+				<button id="step_back" class="button-base step-button button-disabled" data-step="0">BACK</button>
+				<button id="step_next" class="button-base step-button" data-step="0">NEXT</button>
+			</div>
 		</div>
 		<div id="main" class="no-display">
 			<button id="dSave">Save Digital Character Sheet</button>
