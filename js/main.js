@@ -22,7 +22,7 @@ function loadCharSheet() {
 }
 
 function createCharSheet() {
-	event.target.parentNode.parentNode.classList.add("no-display")
+	event.target.parentNode.parentNode.parentNode.classList.add("no-display")
 	l("character_creation_screen").classList.remove("no-display")
 }
 
@@ -39,9 +39,9 @@ function canvasSetup(canvas_id) {
 }
 
 window.onload =_=> {
-	l("import_character").addEventListener("click", loadCharSheet)
-	l("create_new_character").addEventListener("click", createCharSheet)
-	l("step_next").addEventListener("click", nextStep)
+	clickEvent("import_character", loadCharSheet)
+	clickEvent("create_new_character", createCharSheet)
+	clickEvent("step_next", nextStep)
 	
 	canvasSetup("swirl")
 

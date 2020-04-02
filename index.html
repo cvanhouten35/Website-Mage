@@ -74,6 +74,7 @@ LIBRARY COLORS -
 	<head>
 		<link rel="stylesheet" href="css/exposed_variables.css">
 		<link rel="stylesheet" href="css/background.css">
+		<link rel="stylesheet" href="css/wipe.css">
 		<link rel="stylesheet" href="css/fonts.css">
 		<link rel="stylesheet" href="css/buttons.css">
 		<link rel="stylesheet" href="css/logo.css">
@@ -85,8 +86,9 @@ LIBRARY COLORS -
 	<body>
 		<div id="gradient" class="bg bg-base"></div>
 		<canvas id="swirl" class="bg bg-effect"></canvas>
+		<div id="wipe-transition" class="wipe-base"></div>
 		<div id="start_screen" class="full-size">
-			<div class="two-third-width two-third-height center-fully bg-static">
+			<div class="one-third-width two-third-height center-fully bg-static">
 				<div class="center-fully">
 					<img id="mes_logo" src="assets/mes_logo.png" class="logo-base"/>
 					<div id="saved_characters"></div>
@@ -95,30 +97,36 @@ LIBRARY COLORS -
 				</div>
 			</div>
 		</div>
-		<div id="character_creation_screen" class="no-display">
-			<div id="step_0" class="text">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</div>
-			<div id="step_1" class="no-display">
-				<div id="player_information_setup">
-					<div>
-						Player Name: <input id="player_name_setup" />
-					</div>
-					<div>
-						Email Address: <input id="player_email_setup" />
-					</div>
-					<div>
-						Membership ID: <input id="MES_ID_setup" />
-					</div>
-					<div>
-						Venue Storyteller: <input id="venue_storyteller_setup" />
-					</div>
-					<div>
-						VST Email: <input id="venue_storyteller_email_setup" />
-					</div>
-					<div>
-						Domian Coordinator: <input id="domain_coordinator_setup" />
-					</div>
-					<div>
-						DC Email: <input id="domain_coordinator_email_setup" />
+		<div id="character_creation_screen" class="no-display full-size">
+			<div id="cc_step_0" class="full-size">
+				<div class="center-fully one-third-width two-third-height bg-static">
+					<p class="text-base text-center center-vertically">Welcome to the character creator! If at any point you need to want to stop and finish this later, simply close the window. Any and all changes are being saved automatically!</p>
+				</div>
+			</div>
+			<div id="cc_step_1" class="full-size no-display">
+				<div class="center-fully one-third-width two-third-height bg-static">
+					<div id="player_information_setup">
+						<div>
+							Player Name: <input id="player_name_setup" />
+						</div>
+						<div>
+							Email Address: <input id="player_email_setup" />
+						</div>
+						<div>
+							Membership ID: <input id="MES_ID_setup" />
+						</div>
+						<div>
+							Venue Storyteller: <input id="venue_storyteller_setup" />
+						</div>
+						<div>
+							VST Email: <input id="venue_storyteller_email_setup" />
+						</div>
+						<div>
+							Domian Coordinator: <input id="domain_coordinator_setup" />
+						</div>
+						<div>
+							DC Email: <input id="domain_coordinator_email_setup" />
+						</div>
 					</div>
 				</div>
 			</div>

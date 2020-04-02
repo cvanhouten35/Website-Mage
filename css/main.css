@@ -9,40 +9,6 @@ body {
 	overflow: hidden;
 }
 
-.startup-layout {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 45% 10% 10%;
-  grid-gap: 15%;
-}
-
 .no-display {
 	display: none;
-}
-
-.main-page-button {
-	background: #010A3D;
-	background-image: linear-gradient(to bottom, #010A3D, #43BD8E);
-	border-radius: 60px;
-	color: #FFFFFF;
-	padding: 15px 31px 50px 31px;
-	box-shadow: 4px 4px 14px 1px #000000;
-	text-shadow: 0px 1px 20px #000000;
-	border-width: 0px;
-	font-family: "Visitation";
-	font-size: 25px;
-}
-
-.main-page-button:hover {
-	background: #0F1B68;
-	background-image: linear-gradient(to bottom, #0F1B68, #72DDB5);
-}
-
-.main-page-button:active {
-	box-shadow: inset 4px 4px 14px 1px #000000;
-}
-
-.background {
-	position: absolute;
-	z-index: -1;
 }

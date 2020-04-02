@@ -4,7 +4,7 @@
 
 .bg-base {
 	z-index:         -2;
-	background:      linear-gradient(150deg, var(--generic-3), var(--generic-1));
+	background:      linear-gradient(150deg, rgb(var(--generic-3)), rgb(var(--generic-1)));
 	background-size: 200% 200%;
 	animation:       bg-scroll 5s ease infinite, bg-rotate 5s linear infinite;
 	width:           200%;
@@ -33,5 +33,5 @@
 }
 
 .bg-static {
-	background-color: rgba(var(--generic-1), .5);
+	background-color: rgba(var(--generic-1), .25);
 }

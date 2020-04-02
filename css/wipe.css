@@ -1,0 +1,16 @@
+.wipe-animate {
+	animation: wipe-animation linear 2s;
+}
+
+.wipe-base {
+	width: 400%;
+	height: 400%;
+	background-color: var(--generic-white);
+	position: absolute;
+	z-index: 1;
+}
+
+@keyframes wipe-animation {
+	0%   { transform: translateX(0) }
+	100% { transform: translateX(200%) }
+}

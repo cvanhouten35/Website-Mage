@@ -1,7 +1,7 @@
 .button-base {
 	background-color: transparent;
-	border-color:     var(--generic-3);
-	color:            var(--generic-3);
+	border-color:     rgb(var(--generic-3));
+	color:            rgb(var(--generic-3));
 	border-style:     solid;
 	border-width:     2px;
 	padding:          0;
@@ -16,18 +16,22 @@
 }
 
 .button-base:hover {
-	background-color: var(--generic-2);
-	box-shadow:  0px 10px 3px -5px var(--generic-black);
+	background-color: rgb(var(--generic-2));
+	box-shadow:  0px 10px 3px -5px rgb(var(--generic-black));
 }
 
 .button-base:active {
-	background-color: var(--generic-1);
-    box-shadow: 0px 4px 2px -2px var(--generic-black);
+	background-color: rgb(var(--generic-1));
+    box-shadow: 0px 4px 2px -2px rgb(var(--generic-black));
+}
+
+.button-base:focus {
+	outline: none;
 }
 
 .button-disabled {
-	color:        var(--generic-white);
-	border-color: var(--generic-white);
+	color:        rgb(var(--generic-white));
+	border-color: rgb(var(--generic-white));
 	opacity:      75%;
 	cursor:       default;
 }
