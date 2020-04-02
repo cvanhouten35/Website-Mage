@@ -73,21 +73,26 @@ LIBRARY COLORS -
 <html>
 	<head>
 		<link rel="stylesheet" href="css/exposed_variables.css">
-		<link rel="stylesheet" href="css/pretty-check.css">
-		<link rel="stylesheet" href="css/fonts.css">
-		<link rel="stylesheet" href="css/text.css">
 		<link rel="stylesheet" href="css/background.css">
+		<link rel="stylesheet" href="css/fonts.css">
+		<link rel="stylesheet" href="css/buttons.css">
+		<link rel="stylesheet" href="css/logo.css">
+		<link rel="stylesheet" href="css/text.css">
+		<link rel="stylesheet" href="css/positioning.css">
+		<link rel="stylesheet" href="css/sizing.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-		<canvas id="gradient" class="bg bg-base"></canvas>
+		<div id="gradient" class="bg bg-base"></div>
 		<canvas id="swirl" class="bg bg-effect"></canvas>
-		<div id="start_screen">
-			<div class="center-logo startup-layout">
-				<img id="mage_logo" src="assets/mage_logo.png" alt="Stylized words that say 'Mage The Ascension'" />
-				<div id="saved_characters"></div>
-				<button id="create_new_character" class="main-page-button">create new character</button>
-				<button id="import_character" class="main-page-button">import</button>
+		<div id="start_screen" class="full-size">
+			<div class="two-third-width two-third-height center-fully bg-static">
+				<div class="center-fully">
+					<img id="mes_logo" src="assets/mes_logo.png" class="logo-base"/>
+					<div id="saved_characters"></div>
+					<button id="create_new_character" class="button-base">CREATE NEW CHARACTER</button>
+					<button id="import_character" class="button-base">IMPORT CHARACTER CODE</button>
+				</div>
 			</div>
 		</div>
 		<div id="character_creation_screen" class="no-display">

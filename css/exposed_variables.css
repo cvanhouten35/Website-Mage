@@ -1,29 +1,38 @@
 :root {
-	--vampire-1: #262F2A;
-	--vampire-2: #E1000E;
-	--vampire-3: #692E4E;
-	--vampire-4: #425573;
+	--vampire-black: FFFFFF;
+	--vampire-1: 38, 47, 42;
+	--vampire-2: 225, 0, 14;
+	--vampire-3: 105, 46, 78;
+	--vampire-4: 66, 85, 115;
+	--vampire-white: 000000;
 	
-	--mage-1: #5D1451;
-	--mage-2: #2F416D;
-	--mage-3: #14868C;
-	--mage-4: #94CECA;
+	--mage-black: FFFFFF;
+	--mage-1: 93, 20, 81;
+	--mage-2: 47, 65, 109;
+	--mage-3: 20, 134, 140;
+	--mage-4: 148, 206, 202;
+	--mage-white: 000000;
 	
-	--werewolf-1: #A35638;
-	--werewolf-2: #E08F62;
-	--werewolf-3: #D7C79E;
-	--werewolf-4: #9DAB86;
+	--werewolf-black: FFFFFF;
+	--werewolf-1: 163, 86, 56;
+	--werewolf-2: 224, 143, 98;
+	--werewolf-3: 215, 199, 158;
+	--werewolf-4: 157, 171, 134;
+	--werewolf-white: 000000;
 	
-	--changeling-1: #721B65;
-	--changeling-2: #B80D57;
-	--changeling-3: #F8615A;
-	--changeling-4: #FFD868;
+	--changeling-black: FFFFFF;
+	--changeling-1: 114, 27, 101;
+	--changeling-2: 184, 13, 87;
+	--changeling-3: 248, 97, 90;
+	--changeling-4: 255, 216, 104;
+	--changeling-white: 000000;
 	
-	--generic-1: #39375B;
-	--generic-2: #745C97;
-	--generic-3: #D597CE;
-	--generic-4: #F5B0CB;
+	--generic-black: 33 32, 53;
+	--generic-1: 57, 55, 91;
+	--generic-2: 116, 92, 151;
+	--generic-3: 213, 151, 206;
+	--generic-4: 245, 176, 203;
+	--generic-white: 244, 222, 231;
 	
-	--bg-color-1: #467B8D;
-	--bg-color-2: #43BD8E;
+	--logo-size: 500px;
 }

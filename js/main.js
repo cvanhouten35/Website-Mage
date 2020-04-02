@@ -38,29 +38,13 @@ function canvasSetup(canvas_id) {
 	l(canvas_id).setAttribute("height", window.innerHeight)
 }
 
-const gradient         = l("gradient")
-const gradient_context = gradient.getContext("2d")
-
-let noise_array = []
-let noise_worker
-
-function updateNoise(event) {	
-	gradient_context.putImageData(new ImageData(event.data, gradient.width), 0, 0)
-
-	noise_worker.postMessage([gradient.width, gradient.height])
-}
-
 window.onload =_=> {
 	l("import_character").addEventListener("click", loadCharSheet)
 	l("create_new_character").addEventListener("click", createCharSheet)
 	l("step_next").addEventListener("click", nextStep)
 	
-	canvasSetup("gradient")
 	canvasSetup("swirl")
 
-	noise_worker = new Worker("js/calculateNoiseWorker.js")
-	noise_worker.addEventListener("message", updateNoise)
-	noise_worker.postMessage([gradient.width, gradient.height])
 }
 
 

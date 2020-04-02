@@ -1,0 +1,45 @@
+.button-base {
+	background-color: transparent;
+	border-color:     var(--generic-3);
+	color:            var(--generic-3);
+	border-style:     solid;
+	border-width:     2px;
+	padding:          0;
+	font-family:      "Raleway";
+	font-weight:      600;
+	font-size:        24px;
+	cursor:           pointer;
+	padding:          5px;
+	margin:           10px auto;
+	display:          block;
+	width:            100%;
+}
+
+.button-base:hover {
+	background-color: var(--generic-2);
+	box-shadow:  0px 10px 3px -5px var(--generic-black);
+}
+
+.button-base:active {
+	background-color: var(--generic-1);
+    box-shadow: 0px 4px 2px -2px var(--generic-black);
+}
+
+.button-disabled {
+	color:        var(--generic-white);
+	border-color: var(--generic-white);
+	opacity:      75%;
+	cursor:       default;
+}
+
+.button-disabled:hover {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.button-disabled:active {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+

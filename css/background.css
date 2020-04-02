@@ -3,9 +3,35 @@
 }
 
 .bg-base {
-	z-index: -2;
+	z-index:         -2;
+	background:      linear-gradient(150deg, var(--generic-3), var(--generic-1));
+	background-size: 200% 200%;
+	animation:       bg-scroll 5s ease infinite, bg-rotate 5s linear infinite;
+	width:           200%;
+	height:          200%;
+}
+
+@keyframes bg-scroll {
+    0%   {background-position:50% 0%}
+    50%  {background-position:50% 100%}
+    100% {background-position:50% 0%}
+}
+
+@keyframes bg-rotate {
+	0% {
+		transform: rotate(0deg);
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		transform: rotate(360deg);
+		transform: translate(-50%, -50%);
+	}
 }
 
 .bg-effect {
 	z-index: -1;
+}
+
+.bg-static {
+	background-color: rgba(var(--generic-1), .5);
 }

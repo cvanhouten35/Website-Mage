@@ -1,0 +1,4 @@
+.logo-base {
+	width:    var(--logo-size);
+	position: relative;
+}

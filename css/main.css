@@ -6,17 +6,7 @@ Normal Dots -
 */
 body {
 	margin: 0;
-}
-
-button:focus {
-	outline: none;
-}
-
-.center-logo {
-	position: absolute;
-	top: 35%;
-	left: 50%;
-	margin: -96px 0 0 -200px;
+	overflow: hidden;
 }
 
 .startup-layout {
