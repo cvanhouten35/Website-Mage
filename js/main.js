@@ -25,23 +25,54 @@ function createCharSheet() {
 	wipe("start_screen", "character_creation_screen")
 }
 
-function wipe(hide, show) {
+function wipe(hide, show, callback) {
 	const direction_array = ["left", "top", "bottom", "right"]
 	const direction = direction_array[randWhole(0,3)]
 	
 	l("wipe_transition").classList.add("wipe-animate-" + direction)
+	
 	setTimeout(_=> {
 		l(hide).classList.add("no-display")
 		l(show).classList.remove("no-display")
-	}, 1000)
+		
+		if (callback) { callback() }
+	}, 750)
+	
 	setTimeout(_=> {
 		l("wipe_transition").classList.remove("wipe-animate-" + direction)
-	}, 2000)
+	}, 1500)
 }
 
 function nextStep() {
 	const step = Number(event.target.dataset.step)
-	wipe("cc_step_" + step, "cc_step_" + (step + 1))
+	
+	if (step === 0) {
+		wipe("cc_step_0", "cc_step_1", _=> {
+			l("step_back").classList.remove("button-disabled")
+		})
+		setStep(step + 1)
+	} else {
+		wipe("cc_step_" + step, "cc_step_" + (step + 1))
+		setStep(step + 1)
+	}
+}
+
+
+function setStep(step) {
+	l("step_back").dataset.step = step
+	l("step_next").dataset.step = step
+}
+
+function prevStep() {
+	const step = Number(event.target.dataset.step)
+	
+	if (step === 1) {
+		wipe("cc_step_1", "cc_step_0", _=> { l("step_back").classList.add("button-disabled") })
+		setStep(step - 1)
+	} else if (step !== 0) {
+		wipe("cc_step_" + step, "cc_step_" + (step - 1))
+		setStep(step - 1)
+	}
 }
 
 function canvasSetup(canvas_id) {
@@ -53,6 +84,7 @@ window.onload =_=> {
 	clickEvent("import_character", loadCharSheet)
 	clickEvent("create_new_character", createCharSheet)
 	clickEvent("step_next", nextStep)
+	clickEvent("step_back", prevStep)
 	
 	canvasSetup("swirl")
 

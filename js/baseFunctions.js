@@ -1,5 +1,5 @@
 function randWhole(a, b) {
-	return Math.floor(Math.random() * (b - a)) + a
+	return Math.floor(Math.random() * (b + 1 - a)) + a
 }
 
 function randFraction(a, b) {

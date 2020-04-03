@@ -1,8 +1,7 @@
 class Particle {
 	constructor(canvas) {
-		this.canvas = canvas
-		this.x        = 0
-		this.y        = 0
+		this.canvas   = canvas
+		this.pos      = new Vector(0, 0)
 		this.size     = 0
 		this.speed    = 0
 		this.speedMax = 0
@@ -12,8 +11,8 @@ class Particle {
 	}
 	
 	initalize(x, y, life, color, size, speed, speedMax) {
-		this.x     = x     || rand(0, this.canvas.canvas.width)
-		this.y     = y     || rand(0, this.canvas.canvas.height)
+		this.pos.x = x     || rand(0, this.canvas.canvas.width)
+		this.pos.y = y     || rand(0, this.canvas.canvas.height)
 		this.life  = life  || rand(90, 600)
 		this.maxLife = this.life
 		this.color = color || rgbToHex([rand(0, 255), rand(0, 255), rand(0, 255)])

@@ -1,17 +1,17 @@
 .wipe-animate-left {
-	animation: wipe-animation-left cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+	animation: wipe-animation-left cubic-bezier(0.46, 0.02, 0, 1) 1.5s infinite;
 }
 
 .wipe-animate-right {
-	animation: wipe-animation-right cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+	animation: wipe-animation-right cubic-bezier(0.46, 0.02, 0, 1) 1.5s infinite;
 }
 
 .wipe-animate-bottom {
-	animation: wipe-animation-bottom cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+	animation: wipe-animation-bottom cubic-bezier(0.46, 0.02, 0, 1) 1.5s infinite;
 }
 
 .wipe-animate-top {
-	animation: wipe-animation-top cubic-bezier(0.46, 0.02, 0, 1) 1.5s;
+	animation: wipe-animation-top cubic-bezier(0.46, 0.02, 0, 1) 1.5s infinite;
 }
 
 .wipe-base {
