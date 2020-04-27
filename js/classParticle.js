@@ -15,7 +15,7 @@ class Particle {
 		this.pos.y = y    || this.pos.y
 		this.life  = life || this.life
 		this.maxLife = this.life
-		this.color = color || this.color
+		this.color = color || this.color 
 		this.size  = size  || this.size
 		this.speed = speed || randWhole(1, 5)
 		this.speedMax = speedMax || randWhole(30, 50)
